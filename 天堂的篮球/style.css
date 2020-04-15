@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    /*交叉轴方向上所有项的对齐方式,与之对应的单个项的有align-self*/
+    align-items: center; 
+    /* 主轴方向上所有项的对齐方式,与之对应的单个项的有justify-self*/
+    justify-content: center;
+    /* 颜色渐变，默认从圆心开始向外扩张，这里是从紫色到黑色 */
+    background-image: radial-gradient(circle, #542482, #000);
+}
+.ball {
+    width: 50vmin;
+    height: 50vmin;
+    font-size: 50vmin;
+    line-height: 1em;
+    position: relative;
+    transform: translateY(10%);
+}
+.ball::before {
+    content: '';
+    position: absolute;
+    width: 127%;
+    height: 30%;
+    left: 4%;
+    top: -20%;
+    border: 2vmin solid orange;
+    box-sizing: border-box;
+    border-radius: 50%;
+    box-shadow: 0 0 0.1em rgba(255, 255, 0, .5);
+}
+.ball::after {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 20%;
+    left: 25px;
+    bottom: -35px;
+    background-color: hsla(0, 0%, 0%, 0.6);
+    z-index: -1;
+    border-radius: 50%;
+}
