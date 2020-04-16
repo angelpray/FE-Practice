@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkred;
+}
+
+figure {
+    display: grid;
+    grid-template-columns: repeat(8, 1em);
+    grid-template-rows: repeat(3, 1em);
+    font-size: 60px;
+    color: whitesmoke;
+    background-image: 
+        linear-gradient(to bottom, transparent 0%, transparent 99%, pink 100%),
+        linear-gradient(to right, transparent 0%, transparent 99%, pink 100%),
+        linear-gradient(to top, transparent 0%, transparent 99%, pink 100%),
+        linear-gradient(to left, transparent 0%, transparent 99%, pink 100%);
+    background-size: 1em 1em;
+    background-repeat: repeat, repeat, repeat-x, repeat-y;
+}
+.two {
+    background-color: currentColor;
+}
+.two.part1 {grid-area: 1/1;border-radius: 100% 0 0 0;}
+.two.part2 {grid-area: 2/2;border-radius: 0 0 100% 0;}
+.two.part3 {grid-area: 3/1;border-radius: 100% 0 0 0;}
+.two.part4 {grid-area: 3/2;border-radius: 0 0 100% 0;}
+.two {
+    filter: drop-shadow(4em 0);
+}
+.zero {
+    width: 0;
+    height: 0;
+    border: 1em solid;
+    border-color: currentColor transparent;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+}
+.zero.copy-1 {
+    grid-area: 2/3/4/5;
+}
+.zero.copy-2 {
+    grid-area: 2/7/4/9;
+}
