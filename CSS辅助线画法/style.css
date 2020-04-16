@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #89CEEB;
+}
+div {
+    font-size: 50px;
+    width: 6em;
+    height: 4em;
+    background: teal;
+    background-image:
+        linear-gradient(to bottom, transparent 95%, white 95%),
+        linear-gradient(to right, transparent 95%, white 95%),
+        linear-gradient(to top, transparent 95%, white 95%),
+        linear-gradient(to left, transparent 95%, white 95%);
+    background-size: 1em 1em;
+    background-repeat: repeat,repeat,repeat-x,repeat-y;
+}
