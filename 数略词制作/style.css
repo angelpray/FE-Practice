@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(bisque, lightcyan);
+}
+.container {
+    width: 100%;
+}
+.word {
+    font-size: 35px;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+}
+.word:hover {
+    cursor: pointer;
+}
+
+.middle {
+    color: tomato;
+    overflow: hidden;
+    position: relative;
+    transition: 1s;
+    transition-delay: 1s;
+}
+.middle.hide {
+    transition: 1s;
+}
+
+.middle.short {width: 42px;}
+.middle.long {width: 378px;}
+.middle.hide {
+    width: 0;
+}
+
+.middle span {
+    position: absolute;
+    transform: translateX(0);
+    transition: 1s;
+    transition-delay: 1s;
+}
+
+.middle.hide span {
+    transform: translateX(-50%);
+    transition: 1s;
+}
