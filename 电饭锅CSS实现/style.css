@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    background-color: pink;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.steamer {
+    font-size: 8px;
+    background-color: #fff;
+    width: 30em;
+    height: 30em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+}
+.lib {
+    background-color: gold;
+    width: 17em;
+    height: 6em;
+    border-radius: 6em 6em 0 0;
+    border-right: 1.5em solid goldenrod;
+    border-bottom: 1.2em solid goldenrod;
+    position: relative;
+    top: .5em;
+    z-index: 1;
+}
+.pot {
+    background-color: darkslateblue;
+    width: 16em;
+    height: 12em;
+    border-radius: 0 0 6.5em 6.5em;
+    border-right: 1.2em solid midnightblue;
+    position: relative;
+}
+.pot::before {
+    content: '';
+    background-color: tomato;
+    position: absolute;
+    width: 27em;
+    height: 2.5em;
+    border-radius: calc(2.5em / 2);
+    top: 2em;
+    /* 主元素的宽度减去当前元素的宽度 */
+    left: calc((16em + 1.2em - 27em) / 2);
+    z-index: -1;
+}
+.lib::before {
+    content: '';
+    background-color: tomato;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(-4em / 2);
+    left: calc((17em + 1.5em - 4em) / 2);
+}
+.lib::after {
+    content: '';
+    position: absolute;
+    width: 7em;
+    height: 7em;
+    border: .6em solid;
+    border-color: transparent transparent transparent #fff;
+    border-radius: 50%;
+    transform: rotate(40deg);
+    top: .6em;
+    left: 2.5em;
+}
+.pot::after {
+    content: '';
+    position: absolute;
+    width: 8em;
+    height: 8em;
+    border: .6em solid;
+    border-color: transparent transparent #fff transparent;
+    border-radius: 50%;
+    transform: rotate(40deg);
+    left: 2.5em;
+    top: 1em;
+}
